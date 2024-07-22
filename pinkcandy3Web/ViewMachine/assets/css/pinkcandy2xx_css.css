@@ -1,0 +1,908 @@
+@charset "UTF-8";
+/*
+ * PINKCANDY二代样式表
+ * 版权所有 粉糖粒子周周
+ * copyright by pinkcandyzhou
+ */
+/* 全局基本 */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif, monospace;
+  font-size: 100%;
+  font-weight: normal;
+  background-image: linear-gradient(0deg, #f0c8d2, #fac8e6);
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: #323232;
+}
+
+a {
+  font-size: 1em;
+  font-weight: bold;
+  transition: color 0.5s;
+}
+a:link {
+  color: #000078;
+}
+a:visited {
+  color: #000078;
+}
+a:hover {
+  color: blue;
+}
+a:active {
+  color: blue;
+}
+
+/* 导航栏 */
+#menu {
+  width: 95%;
+  float: right;
+  position: relative;
+  text-align: left;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #465064;
+  z-index: 5;
+  overflow: hidden;
+}
+#menu img {
+  height: 5em;
+  vertical-align: middle;
+}
+#menu span {
+  font-size: 3em;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#menuFull {
+  width: 100%;
+  float: right;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #465064;
+  z-index: 5;
+  overflow: hidden;
+}
+#menuFull img {
+  height: 5em;
+  vertical-align: middle;
+}
+#menuFull span {
+  font-size: 3em;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#menuPhone {
+  width: 100%;
+  float: right;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #465064;
+  z-index: 5;
+  overflow: hidden;
+  white-space: pre-line;
+  visibility: hidden;
+}
+#menuPhone img {
+  height: 3em;
+  vertical-align: middle;
+}
+#menuPhone span {
+  font-size: 2em;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#menuSide {
+  width: 5%;
+  height: 100%;
+  float: left;
+  position: fixed;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #3c3c46;
+  padding: 0.5em;
+  z-index: 6;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#menuSide img {
+  width: 100%;
+  vertical-align: middle;
+  transition: box-shadow 0.5s;
+}
+#menuSide img:hover {
+  box-shadow: 0 0 0 0.5em #326496;
+}
+#menuSide span {
+  font-size: 2em;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+#menuSide ul {
+  width: 100%;
+  position: relative;
+}
+#menuSide li {
+  width: 100%;
+  display: block;
+  padding-bottom: 0.5em;
+}
+#menuSide li:hover .menuInfo {
+  visibility: visible;
+}
+#menuSide li .menuInfo {
+  visibility: hidden;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(240, 240, 240, 0.75);
+  border-radius: 1em;
+  overflow: hidden;
+}
+#menuSide li .menuInfo h1 {
+  color: #326496;
+}
+#menuSide li .menuInfo h2 {
+  color: orange;
+}
+#menuSide li .menuInfo p {
+  color: #323232;
+}
+#menuSide li .menuInfo img {
+  width: 90%;
+  vertical-align: middle;
+}
+#menuSide a {
+  display: block;
+  font-weight: bold;
+}
+
+#menuSearch {
+  width: auto;
+  text-align: left;
+  align-items: center;
+  background-color: #3c3c46;
+}
+#menuSearch input, #menuSearch button {
+  font-size: 1.2em;
+  padding: 0.25em;
+  vertical-align: middle;
+  border: 0em;
+  margin: 0em;
+  background-color: rgba(240, 240, 240, 0.75);
+}
+
+#loginBox {
+  width: 100%;
+  background-color: rgba(240, 240, 240, 0.75);
+  text-align: left;
+  font-size: 0.8em;
+}
+#loginBox button {
+  font-size: 1.2em;
+  padding: 0.25em;
+  vertical-align: middle;
+  border: 0em;
+  margin: 0em;
+  background-color: rgba(240, 240, 240, 0.75);
+}
+
+/* 网页内容 */
+.screen {
+  width: 95%;
+  position: relative;
+  float: right;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.screenFull {
+  width: 100%;
+  position: relative;
+  float: right;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.homePageBox {
+  position: relative;
+  text-align: center;
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+.homePageBox .homePage_leftSide {
+  width: 40%;
+  float: left;
+}
+.homePageBox .homePage_rightSide {
+  width: 60%;
+  float: left;
+}
+
+.gardenBox {
+  width: 100%;
+  position: relative;
+  font-size: 1em;
+  text-align: left;
+  z-index: 4;
+  box-sizing: border-box;
+}
+.gardenBox h1 {
+  font-size: 1.2em;
+  color: #326496;
+  transition: background-color 1s;
+}
+.gardenBox h1:hover {
+  background-color: rgba(50, 100, 150, 0.25);
+}
+.gardenBox h2 {
+  font-size: 1em;
+  color: #323264;
+  transition: background-color 1s;
+}
+.gardenBox h2:hover {
+  background-color: rgba(50, 50, 100, 0.25);
+}
+.gardenBox p {
+  font-size: 0.8em;
+}
+.gardenBox .theFirstPost {
+  width: 100%;
+  word-wrap: break-word;
+  background-color: rgba(170, 250, 220, 0.2);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  transition: all 0.5s;
+  word-wrap: break-word;
+  text-align: center;
+  font-size: 1.2em;
+  margin-block: 1em;
+}
+.gardenBox .theFirstPost img {
+  width: 90%;
+}
+.gardenBox .theFirstPost:hover {
+  background-color: rgba(250, 50, 100, 0.2);
+  z-index: 5;
+}
+.gardenBox .theGarden {
+  width: 100%;
+  float: left;
+  columns: 2;
+  column-gap: 0;
+}
+.gardenBox .theGarden .theGardenPost {
+  background-color: rgba(170, 250, 220, 0.2);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  transition: all 0.5s;
+  word-wrap: break-word;
+  margin-bottom: 0.5em;
+}
+.gardenBox .theGarden .theGardenPost img {
+  width: 100%;
+}
+.gardenBox .theGarden .theGardenPost:hover {
+  background-color: rgba(240, 240, 240, 0.75);
+  z-index: 5;
+}
+.gardenBox .theGarden .theGardenPost button {
+  background-color: rgba(240, 240, 240, 0.75);
+  font-size: 0.8em;
+  padding: 0.25em;
+  border: 0;
+  margin: 0;
+}
+.gardenBox .focusPostLeft {
+  width: 40%;
+  float: left;
+  word-wrap: break-word;
+  font-size: 1.2em;
+}
+.gardenBox .focusPostLeft img {
+  width: 100%;
+}
+.gardenBox .focusPostLeft .formBox {
+  font-size: 0.8em;
+}
+.gardenBox .focusPostLeft .thePostContent {
+  white-space: pre-line;
+  color: #3c3c3c;
+}
+.gardenBox .focusPostRight {
+  width: 60%;
+  float: right;
+}
+.gardenBox .focusPostRight .thePostComment {
+  width: 100%;
+  text-align: left;
+  padding: 0.25em;
+  box-sizing: border-box;
+  float: left;
+  position: relative;
+  border: 0.25em solid #326496;
+  word-wrap: break-word;
+  white-space: wrap;
+}
+.gardenBox .focusPostRight .thePostComment .leftSide {
+  width: 40%;
+  word-wrap: break-word;
+  float: left;
+}
+.gardenBox .focusPostRight .thePostComment .leftSide .thePostContent {
+  white-space: pre-line;
+  color: #3c3c3c;
+}
+.gardenBox .focusPostRight .thePostComment .rightSide {
+  text-align: center;
+  width: 60%;
+  float: right;
+}
+.gardenBox .focusPostRight .thePostComment .rightSide img {
+  width: 75%;
+}
+.gardenBox .focusPostRight .thePostComment .onlyImg {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+.gardenBox .focusPostRight .thePostComment .onlyImg img {
+  width: 75%;
+}
+.gardenBox .focusPostRight .thePostComment .thePostReply {
+  width: 95%;
+  float: right;
+  text-align: left;
+}
+.gardenBox .focusPostRight .thePostComment .thePostReply .thePostContent {
+  white-space: pre-line;
+  color: #3c3c3c;
+}
+
+.galleryBox {
+  width: 100%;
+  position: relative;
+  font-size: 1em;
+  columns: 2;
+  column-gap: 0;
+  margin: auto;
+}
+.galleryBox canvas {
+  width: 100%;
+}
+
+.formBox {
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  float: left;
+  text-align: left;
+  padding: 0.25em;
+}
+.formBox .side {
+  width: 50%;
+  float: left;
+  display: block;
+  box-sizing: border-box;
+  text-align: left;
+}
+.formBox button, .formBox select, .formBox input, .formBox textarea {
+  background-color: rgba(240, 240, 240, 0.75);
+  font-size: 0.8em;
+  padding: 0.25em;
+  border: 0;
+  margin: 0.25em;
+  vertical-align: middle;
+}
+.formBox input, .formBox textarea {
+  box-sizing: border-box;
+}
+
+.showPic {
+  width: 100%;
+  max-height: 32em;
+  overflow-y: scroll;
+  margin: auto;
+  text-align: center;
+}
+.showPic img {
+  width: 90%;
+  margin: 0.3em;
+}
+
+.showGalleryIndex {
+  position: relative;
+  overflow: hidden;
+  break-inside: avoid;
+  text-align: left;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  transition: all 0.5s;
+  z-index: 4;
+  box-sizing: border-box;
+  background-color: rgba(170, 250, 220, 0.2);
+  margin-bottom: 0.5em;
+}
+.showGalleryIndex:hover {
+  position: relative;
+  overflow-y: scroll;
+  background-color: rgba(250, 50, 100, 0.2);
+  z-index: 5;
+}
+.showGalleryIndex h1 {
+  font-size: 1.2em;
+  color: #326496;
+  transition: background-color 1s;
+}
+.showGalleryIndex h1:hover {
+  background-color: rgba(50, 100, 150, 0.25);
+}
+.showGalleryIndex h2 {
+  font-size: 1em;
+  color: #323264;
+  transition: background-color 1s;
+}
+.showGalleryIndex h2:hover {
+  background-color: rgba(50, 50, 100, 0.25);
+}
+.showGalleryIndex p {
+  font-size: 0.8em;
+}
+.showGalleryIndex img {
+  width: 100%;
+}
+.showGalleryIndex button {
+  background-color: rgba(240, 240, 240, 0.75);
+  font-size: 0.8em;
+  padding: 0.25em;
+  border: 0;
+  margin: 0;
+}
+
+.showGallery {
+  overflow: hidden;
+  break-inside: avoid;
+  text-align: center;
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding: 0.25em;
+}
+.showGallery .firstSide {
+  width: 60%;
+  float: left;
+  display: block;
+  box-sizing: border-box;
+}
+.showGallery .secondSide {
+  width: 40%;
+  float: left;
+  display: block;
+  box-sizing: border-box;
+}
+.showGallery .secondSide .txtBox .information {
+  border: 0.25em solid #326496;
+  text-wrap: wrap;
+  white-space: pre-line;
+}
+.showGallery img {
+  width: 90%;
+  margin: 0.3em;
+}
+
+.previewGallery {
+  position: relative;
+  display: contents;
+}
+.previewGallery .galleryTitle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.25;
+  transition: all 0.5s;
+  z-index: 6;
+  font-size: 1.2em;
+  color: #326496;
+  font-weight: bold;
+  text-shadow: 0em 0em 0.1em whitesmoke;
+}
+.previewGallery .galleryTitle:hover {
+  opacity: 1;
+}
+.previewGallery .imgBox {
+  position: relative;
+  display: inline-block;
+}
+.previewGallery .imgBox img {
+  max-width: 20em;
+  height: 10em;
+  overflow: hidden;
+  transition: box-shadow 0.5s;
+  z-index: 4;
+}
+.previewGallery .imgBox img:hover {
+  position: relative;
+  box-shadow: 0 0 0 0.25em skyblue;
+  z-index: 5;
+}
+
+.infoBox {
+  width: 100%;
+  font-size: 1.2em;
+  margin: auto;
+  padding: 0.25em;
+  box-sizing: border-box;
+  text-align: left;
+  white-space: pre-line;
+}
+.infoBox h1 {
+  font-size: 1.4em;
+  color: #326496;
+}
+.infoBox h2 {
+  font-size: 1.2em;
+  color: #323264;
+}
+.infoBox p {
+  font-size: 1em;
+  color: #3c3c3c;
+}
+
+.txtBox {
+  width: 100%;
+  font-size: 1em;
+  font-weight: normal;
+  margin: auto;
+  text-align: left;
+  text-wrap: wrap;
+}
+.txtBox h1 {
+  font-size: 1.2em;
+  color: #326496;
+}
+.txtBox h2 {
+  font-size: 1em;
+  color: #323264;
+}
+.txtBox p {
+  font-size: 0.8em;
+  color: #3c3c3c;
+}
+.txtBox pre {
+  border: 0.25em solid #323232;
+  overflow: hidden;
+  text-wrap: inherit;
+  text-wrap: wrap;
+}
+
+.boardBox {
+  columns: 5;
+  column-gap: 0.5em;
+}
+.boardBox .txtBox {
+  width: 100%;
+  margin: 0;
+}
+
+#showInput, #showTags {
+  font-size: 1em;
+  font-weight: bolder;
+  color: orange;
+}
+
+#starFormBox {
+  width: 100%;
+}
+#starFormBox button {
+  width: 100%;
+  background-color: rgba(240, 240, 240, 0.75);
+  font-size: 0.6em;
+  padding: 0.25em;
+  border: 0;
+  margin: 0;
+}
+
+.userBox {
+  width: 100%;
+  position: relative;
+  float: left;
+  display: flex;
+}
+.userBox .leftSide {
+  width: 60%;
+}
+.userBox .leftSide .galleryBox {
+  columns: 3;
+  font-size: 1em;
+  width: 100%;
+}
+.userBox .rightSide {
+  width: 40%;
+}
+.userBox .rightSide .essayBox {
+  text-align: left;
+  font-size: 1em;
+  text-wrap: wrap;
+  max-height: 32em;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 0.25em;
+  background-color: rgba(50, 50, 50, 0.2);
+  margin: 0.25em;
+}
+.userBox .rightSide .essayBox h1 {
+  color: #326496;
+  font-size: 1em;
+}
+.userBox .rightSide .essayBox h2 {
+  color: #323264;
+  font-size: 0.8em;
+  background-color: none;
+  transition: all 1s;
+}
+.userBox .rightSide .essayBox h2 :hover {
+  background-color: rgba(50, 50, 100, 0.25);
+}
+.userBox .rightSide .essayBox p {
+  font-size: 0.8em;
+  white-space: pre-line;
+  text-wrap: wrap;
+  color: #3c3c3c;
+}
+
+.userBoxIndex {
+  width: 100%;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #323232;
+  background-color: #f0c8d2;
+}
+
+.operateBox {
+  position: relative;
+  width: 100%;
+  font-size: 1em;
+  float: right;
+  z-index: 5;
+}
+.operateBox .information {
+  width: 50%;
+  margin: auto;
+  position: relative;
+  max-height: 1em;
+  line-height: 100%;
+  font-size: 1em;
+  text-align: center;
+  background-color: rgba(240, 240, 240, 0.75);
+  transition: all 1s;
+}
+.operateBox .contentBox {
+  width: 100%;
+  position: absolute;
+  font-size: 1em;
+  max-height: 1em;
+  overflow-y: hidden;
+  text-align: left;
+  transition: all 1s;
+  background-color: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  z-index: 5;
+}
+.operateBox .contentBox:hover {
+  max-height: fit-content;
+  overflow-y: scroll;
+  background-color: rgba(240, 240, 240, 0.75);
+}
+
+.statementBox {
+  width: 100%;
+  font-size: 1em;
+  text-align: left;
+  font-weight: bold;
+  background-color: rgba(50, 50, 50, 0.2);
+  color: #323232;
+}
+
+.commentsBox {
+  width: 100%;
+  font-size: 0.8em;
+  text-align: left;
+  text-wrap: wrap;
+}
+.commentsBox h1 {
+  color: #326496;
+}
+.commentsBox h2 {
+  color: #323264;
+  font-size: 0.8em;
+}
+.commentsBox p {
+  color: #3c3c3c;
+  font-size: 0.8em;
+}
+
+.searchBox {
+  font-size: 1em;
+  margin: auto;
+  text-align: left;
+}
+.searchBox .galleryBox {
+  columns: 4;
+}
+
+/* 网页内容 */
+@media screen and (max-width: 1200px) {
+  #menu {
+    width: 90%;
+  }
+
+  #menuSide {
+    width: 10%;
+  }
+
+  .screen {
+    width: 90%;
+  }
+
+  .galleryBox {
+    width: 90%;
+  }
+
+  .boardBox {
+    columns: 4;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .boardBox {
+    columns: 3;
+  }
+}
+@media screen and (max-width: 800px) {
+  #menu {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+
+  #menuSide {
+    visibility: hidden;
+  }
+
+  .screen {
+    width: 100%;
+  }
+
+  .galleryBox {
+    width: 100%;
+    columns: 1;
+  }
+
+  .boardBox {
+    columns: 2;
+  }
+
+  * {
+    font-size: 1em;
+  }
+
+  .showGalleryIndex h1 {
+    font-size: 1em;
+  }
+
+  .showGalleryIndex h2, p {
+    font-size: 0.8em;
+  }
+
+  .infoBox h1 {
+    font-size: 1em;
+  }
+
+  .infoBox h2, p {
+    font-size: 0.8em;
+  }
+
+  .txtBox h1 {
+    font-size: 1em;
+  }
+
+  .txtBox h2, p {
+    font-size: 0.8em;
+  }
+
+  #menuPhone {
+    position: relative;
+    visibility: visible;
+    white-space: wrap;
+  }
+
+  #menuSearch {
+    margin: auto;
+    position: relative;
+  }
+
+  .formBox .side {
+    width: 100%;
+  }
+
+  .showGallery .firstSide {
+    width: 100%;
+  }
+
+  .showGallery .secondSide {
+    width: 100%;
+  }
+
+  .userBox .leftSide {
+    width: 50%;
+  }
+
+  .userBox .rightSide {
+    width: 50%;
+  }
+
+  .userBox .leftSide .galleryBox {
+    columns: 1;
+  }
+
+  .homePageBox .homePage_leftSide {
+    width: 100%;
+  }
+
+  .homePageBox .homePage_rightSide {
+    width: 100%;
+  }
+
+  .gardenBox .theGarden {
+    columns: 1;
+  }
+
+  .gardenBox .focusPostLeft {
+    width: 100%;
+  }
+
+  .gardenBox .focusPostRight {
+    width: 100%;
+  }
+
+  .searchBox .galleryBox {
+    columns: 2;
+  }
+}
+@media screen and (max-width: 600px) {
+  .galleryBox {
+    width: 100%;
+  }
+
+  .boardBox {
+    columns: 1;
+  }
+}

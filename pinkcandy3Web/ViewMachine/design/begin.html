@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粉糖粒子 开始</title>
+    <link href="https://cdn.staticfile.net/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.net/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./files/pinkcandyDefault.css">
+    <link rel="icon" href="./files/logoICO.ico" type="img/x-icon">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container-sm p-3">
+            <!-- 入口 -->
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="./files/wolf.png" class="img-fluid rounded-start" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="container-sm p-3">                         
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                                        登录粉糖粒子
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                                        <div class="card-body">
+                                            <form action="">
+                                                <div class="input-group">
+                                                    <span class="input-group-text">账号</span>
+                                                    <input type="text" class="form-control" placeholder="输入粉糖账号或邮箱">    
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-text">密码</span>
+                                                    <input type="text" class="form-control" placeholder="输入密码">
+                                                    <button class="btn btn-outline-secondary">登录</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                                        注册粉糖账号
+                                    </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+                                            <form action="">
+                                                <div class="input-group">
+                                                    <span class="input-group-text">粉糖账号</span>
+                                                    <input type="text" class="form-control" placeholder="创建一个五位数字粉糖账号 粉糖账号不可更改">  
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-text">登记邮箱</span>
+                                                    <input type="text" class="form-control" placeholder="粉糖账号需要与一个有效邮箱对应">  
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-text">设置密码</span>
+                                                    <input type="text" class="form-control" placeholder="设置粉糖账号密码用于验证身份">
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-text">起个名称</span>
+                                                    <input type="text" class="form-control" placeholder="其他小兽怎么称呼您？">
+                                                    <button class="btn btn-outline-secondary">注册</button>
+                                                </div>
+                                            </form>
+                                            <h3>注册说明</h3>
+                                            <p>
+                                                欢迎加入粉糖粒子<br>
+                                                创建一个五位数字粉糖账号 粉糖账号不可更改<br>
+                                                粉糖账号需要与一个有效邮箱对应。确保邮箱正确可用，因为这是唯一可找回账号密码的途径。<br>
+                                                设置粉糖账号密码用于验证身份<br>
+                                                名称、头像、背景墙等内容稍后可以到小兽空间设置。<br>
+                                                若发现邮箱被占用，请联系总管理兽修改。<br>
+                                                开发者邮箱 pinkcandyzhou@qq.com<br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+                                        忘记密码
+                                        </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+                                            <form action="">
+                                                <p>先</p>
+                                                <div class="input-group">
+                                                    <span class="input-group-text">邮箱</span>
+                                                    <input type="text" class="form-control" placeholder="输入粉糖账号对应的邮箱获取验证码">
+                                                    <button class="btn btn-outline-secondary">获取</button>
+                                                </div>
+                                                <p>后</p>
+                                                <div class="input-group">
+                                                    <span class="input-group-text">重置密码</span>
+                                                    <input type="text" class="form-control" placeholder="重置粉糖账号的密码">
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-text">验证码</span>
+                                                    <input type="text" class="form-control" placeholder="输入验证码">
+                                                    <button class="btn btn-outline-secondary">重置</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
