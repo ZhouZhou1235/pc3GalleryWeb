@@ -1,0 +1,24 @@
+{
+  "name": "ZZ粉糖粒子WW",
+  "short_name": "ZZWW",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A simple furry images Web - PinkCandy",
+  "icons": [
+    {
+      "src": "fileLibrary/images/theSignPWA.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web"
+    },
+    {
+      "platform": "play",
+      "url": "http://localhost"
+    }
+  ]
+}
