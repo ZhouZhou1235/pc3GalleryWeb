@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.gameArea {
+    position: relative;
+    margin: auto;
+    width: 1000px;
+    height: 800px;
+    background-color: antiquewhite;
+    /* overflow: hidden; */
+}
+
+#gameStart {
+    font-size: 40px;
+    text-align: center;
+}
+
+#player {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+}
+
+#player img {
+    width: 100px;
+}
+
+#things {
+    position: relative;
+}
+
+#things img {
+    width: 100px;
+}
+
+#candy {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 900px;
+    top: 700px;
+}
+
+#candy img {
+    width: 100px;
+}

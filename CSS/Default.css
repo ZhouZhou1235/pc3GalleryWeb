@@ -1,0 +1,324 @@
+/* 
+ * ZZWW CSS样式表
+ * Copyright 版权所有者 pinkcandyZHOU
+ * https://zhouzhouwebworld.online
+ * 可自由非商业使用
+ */
+
+/* 基本 */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial,'Microsoft YaHei','黑体','宋体',sans-serif;
+}
+
+body {
+    /* background-image:url(../fileLibrary/images/backgroundDefault.jpg); */
+    background-color: whitesmoke;
+    background-size: 100%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 50px;
+    color: black;
+    background-color: gray;
+}
+
+h2 {
+    font-size: 40px;
+    color: rgb(100,150,200);
+}
+
+p {
+    font-size: 30px;
+    color: black;
+}
+
+a {
+    font-size: 30px;
+}
+a:link{color: rgb(50,50,50);}
+a:visited {color:rgb(50,50,50);}
+a:hover {color:rgb(100,150,250);}
+a:active {color:rgb(100,150,250);}
+
+/* div盒子 */
+.divMain {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    font-weight: normal;
+    color: black;
+}
+
+.divBasic {
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgba(128,128,128,0.1);
+}
+
+.divScreen {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    border-radius: 15px;
+    background-color: rgba(128,128,128,0.1);
+    border: 3px solid rgb(100,150,250);
+    text-align: center;
+}
+.divScreen .divShow25 {
+    width: 25%;
+    max-height: 1000px;
+    overflow-y: scroll;
+    background-color: rgba(128,128,128,0.1);
+}
+.divScreen .divShow50 {
+    width: 50%;
+    max-height: 2000px;
+    overflow-y: scroll;
+    background-color: rgba(128,128,128,0.1);
+}
+
+.divContent {
+    margin: auto;
+    width: 50%;
+    border-radius: 15px;
+    background-color: rgba(128,128,128,0.1);
+    word-break: break-all;
+    text-align: left;
+    overflow: hidden;
+}
+
+.divContentWiden {
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgba(128,128,128,0.1);
+    word-break: break-all;
+    text-align: left;
+    overflow: hidden;
+}
+
+.leftSide {
+    float: left;
+    width: 25%;
+    border-radius: 15px;
+    background-color: rgba(128,128,128,0.1);
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.rightSide {
+    float: right;
+    width: 25%;
+    border-radius: 15px;
+    background-color: rgba(210,210,210,0.1);
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.divSpectial {
+    margin: auto;
+    width: 75%;
+    border-radius: 15px;
+    background-color: rgba(100,150,250,0.3);
+    overflow: hidden;
+}
+
+.divMiddle {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    padding: 15px;
+    border: 3px solid rgb(100,150,250);
+    backdrop-filter: blur(5px);
+    background-color: rgba(100,150,250,0.3);
+    z-index: 2;
+    box-shadow: 2px 2px 5px rgb(100, 100, 250);
+}
+
+.divTitle {
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgba(100,150,250,0.3);
+    text-align: center;
+}
+.divTitle:hover {
+    background-color: rgb(100, 100, 250);
+}
+
+.divEnd {
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgba(128,128,128,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divFloor {
+    margin: auto;
+    width: 75%;
+    text-align: center;
+    align-items: center;
+    border-radius: 15px;
+    border: 3px solid rgb(100,150,250);
+    background-color: rgba(100,150,250,0.3);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+}
+
+#divMenu {
+    width: 100%;
+    line-height: 50px;
+    background-color: rgba(100,150,250,0.5);
+    position: fixed;
+    text-align: left;
+    visibility: hidden;
+}
+#divMenu a {
+    border: 3px solid rgb(170, 100, 250);
+    background-color: none;
+}
+#divMenu a:link{color: whitesmoke;}
+#divMenu a:visited {color:whitesmoke;}
+#divMenu a:hover {color:rgb(170, 100, 250);}
+#divMenu a:active {color:rgb(170, 100, 250);}
+
+.divButton {
+    width: 25%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
+
+.divInputZone {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.divFullImg {
+    margin: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-size: cover;
+    background: fixed;
+    z-index: 1;
+}
+
+.divUser {
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    width: 75%;
+    padding: 5px;
+    border-radius: 15px;
+    border: 3px solid rgb(100,150,250);
+    backdrop-filter: blur(5px);
+    background-color: rgba(100,150,250,0.3);
+    z-index: 2;
+}
+
+/* 全局按钮和列表 */
+button,input,select {
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(210,210,210,0.1);
+    border: 3px solid rgb(100,150,250);
+    font-size: 30px;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color: rgba(210,210,210,0.1);
+    border: 3px solid rgb(100,150,250);
+}
+
+table {
+    width: 100%;
+    border: 3px solid rgb(100, 150, 250);
+}
+
+table th,td{
+    border: 3px solid rgb(100,150,250);
+    margin: 0px;
+}
+
+/* 窗口自适应 */
+@media screen and (max-width: 800px){
+    * {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    a {
+        font-size: 20px;
+    }
+
+    .leftSide {
+        width: 100%;
+        float: none;
+    }
+
+    .rightSide {
+        width: 100%;
+        float: none;
+
+    }
+
+    .divContent {
+        width: 100%;
+    }
+
+    .divScreen .divShow25 {
+        width: 50%;
+    }
+    .divScreen .divShow50 {
+        width: 100%;
+    }
+
+    button,input,select {
+        background-color: rgba(210,210,210,0.1);
+        border: 3px solid rgb(100,150,250);
+        font-size: 20px;
+    }
+
+    textarea {
+        width: 75%;
+        font-size: 20px;
+        background-color: rgba(210,210,210,0.1);
+        border: 3px solid rgb(100,150,250);
+    }
+}

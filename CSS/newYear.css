@@ -1,0 +1,235 @@
+/* 
+ * ZZWW CSS样式表
+ * Copyright 版权所有者 pinkcandyZHOU
+ * https://zhouzhouwebworld.online
+ * 可自由非商业使用
+ */
+
+/* 基本 */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial,'Microsoft YaHei','黑体','宋体',sans-serif;
+}
+
+body {
+    /* background-image:url(../fileLibrary/images/backgroundDefault.jpg); */
+    background-color: rgb(235, 243, 222);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 50px;
+    color: rgb(241, 106, 43);
+    background-color: rgb(248, 200, 97);
+}
+
+h2 {
+    font-size: 40px;
+    color: rgb(182, 38, 38);
+}
+
+p {
+    font-size: 30px;
+    color: rgb(49, 48, 46);
+}
+
+a {
+    font-size: 30px;
+}
+a:link{color: rgb(238, 122, 28);}
+a:visited {color:rgb(238, 122, 28);}
+a:hover {color:rgb(100,150,250);}
+a:active {color:rgb(100,150,250);}
+
+/* div盒子 */
+.divMain {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    font-weight: normal;
+    color: black;
+}
+
+.divBasic {
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgba(226, 13, 66, 0.1);
+}
+
+.divContent {
+    margin: auto;
+    width: 50%;
+    border-radius: 15px;
+    background-color: rgba(226, 13, 66, 0.1);
+    word-break: break-all;
+    text-align: left;
+    overflow: hidden;
+}
+
+.divContentWiden {
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgba(226, 13, 66, 0.1);
+    word-break: break-all;
+    text-align: left;
+    overflow: hidden;
+}
+
+.leftSide {
+    float: left;
+    width: 25%;
+    border-radius: 15px;
+    background-color: rgba(226, 13, 66, 0.1);
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.rightSide {
+    float: right;
+    width: 25%;
+    border-radius: 15px;
+    background-color: rgba(226, 13, 66, 0.1);
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.divSpectial {
+    margin: auto;
+    width: 75%;
+    border-radius: 15px;
+    background-color: rgba(231, 80, 34, 0.3);
+    overflow: hidden;
+}
+
+.divTitle {
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgba(231, 80, 34, 0.3);
+    text-align: center;
+}
+.divTitle:hover {
+    background-color: rgb(231, 80, 34);
+}
+
+.divEnd {
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgba(231, 34, 149, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#divMenu {
+    width: 100%;
+    line-height: 50px;
+    background-color: rgba(231, 80, 34, 0.3);
+    position: fixed;
+    text-align: left;
+    visibility: hidden;
+}
+#divMenu a {
+    border: 3px solid rgb(170, 100, 250);
+    background-color: none;
+}
+#divMenu a:link{color: whitesmoke;}
+#divMenu a:visited {color:whitesmoke;}
+#divMenu a:hover {color:rgb(170, 100, 250);}
+#divMenu a:active {color:rgb(170, 100, 250);}
+
+.divButton {
+    width: 25%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
+
+.divInputZone {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+/* 全局按钮和列表 */
+button,input,select {
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(231, 80, 34, 0.3);
+    border: 3px solid rgb(248, 200, 97);
+    font-size: 30px;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color: rgba(231, 80, 34, 0.3);
+    border: 3px solid rgb(248, 200, 97);
+}
+
+table {
+    width: 100%;
+    border: 3px solid rgb(248, 200, 97);
+}
+
+table th,td{
+    border: 3px solid rgb(248, 200, 97);
+    margin: 0px;
+}
+
+/* 窗口自适应 */
+@media screen and (max-width: 800px){
+    * {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    a {
+        font-size: 20px;
+    }
+
+    .leftSide {
+        width: 100%;
+        float: none;
+    }
+
+    .rightSide {
+        width: 100%;
+        float: none;
+
+    }
+
+    .divContent {
+        width: 100%;
+    }
+
+    button,input,select {
+        background-color: rgba(210,210,210,0.1);
+        border: 3px solid rgb(248, 200, 97);
+        font-size: 20px;
+    }
+
+    textarea {
+        width: 75%;
+        font-size: 20px;
+        background-color: rgba(210,210,210,0.1);
+        border: 3px solid rgb(248, 200, 97);
+    }
+}

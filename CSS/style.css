@@ -1,0 +1,461 @@
+/* 
+ * ZZWW CSS样式表
+ * Copyright 版权所有者 pinkcandyZHOU
+ * https://zhouzhouwebworld.online
+ * 可自由非商业使用
+ */
+
+/* 全局基本 */
+* {
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+font-family: 'SimHei', monospace, sans-serif;
+}
+
+body {
+    font-size: 100%;
+    font-weight: normal;
+    background-color: whitesmoke;
+    background-image: linear-gradient(0deg, AliceBlue, whitesmoke);
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 3em;
+    color: black;
+    background-color: rgba(255, 192, 203, 0.3);
+    animation-name: h1;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    padding: 0.3em;
+}
+@keyframes h1 {
+    0% {color: rgb(100, 150, 200);}
+    100% {color: black;}
+}
+
+h2 {
+    font-size: 2em;
+    color: rgb(100, 150, 200);
+    text-overflow: ellipsis;
+    animation-name: h2;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+@keyframes h2 {
+    0% {color: rgba(100, 150, 200, 0.3);}
+    100% {color: rgb(100, 150, 200);}
+}
+
+p {
+    font-size: 1.5em;
+    color: rgb(40, 40, 40);
+    animation-name: p;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+}
+@keyframes p {
+    0% {color: rgba(40, 40, 40, 0.1);}
+    100% {color: rgb(40, 40, 40);}
+}
+
+a {
+    font-size: 1em;
+    transition: color 1s;
+    animation-name: a;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+@keyframes a {
+    0% {color: rgba(100,150,250,0.1);}
+    100% {color: rgb(100,150,250);}
+}
+a:link {color:rgb(100,150,250);}
+a:visited {color:rgb(100,150,250);}
+a:hover {color:rgb(100,100,250);}
+a:active {color:rgb(100,100,250);}
+
+/* 盒子 */
+.divMain {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.divBasic {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.divScreen {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    border: 0.1em solid rgb(100,150,250);
+    border-radius: 1em;
+    background-color: rgba(240, 240, 240, 0.3);
+    text-align: center;
+    padding: 0.5em;
+    box-sizing: border-box;
+    animation-name: divScreen;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+@keyframes divScreen {
+    0% {background-color: rgba(240, 240, 240, 0);}
+    100% {background-color: rgba(240, 240, 240, 0.3);}
+}
+.divScreen .divShow25 {
+    width: 25%;
+    max-height: 64em;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: 0.1em solid rgb(100,150,250);
+    border-radius: 1em;
+    background-color: rgba(40, 40, 40, 0.1);
+    box-sizing: border-box;
+}
+.divScreen .divShow50 {
+    width: 50%;
+    max-height: 64em;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: 0.1em solid rgb(100,150,250);
+    border-radius: 1em;
+    background-color: rgba(40, 40, 40, 0.1);
+    box-sizing: border-box;
+}
+
+.divContent {
+    width: 50%;
+    margin: auto;
+    border-radius: 1em;
+    background-color: rgba(40, 40, 40, 0.1);
+    word-break: break-all;
+    text-align: left;
+    overflow: hidden;
+    padding: 0.5em;
+    box-sizing: border-box;
+    animation-name: divContent;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+@keyframes divContent {
+    0% {background-color: rgba(40, 40, 40, 0);}
+    100% {background-color: rgba(40, 40, 40, 0.1);}
+}
+
+.divContentWiden {
+    width: 100%;
+    border-radius: 1em;
+    background-color: rgba(40, 40, 40, 0.1);
+    word-break: break-all;
+    text-align: left;
+    overflow: hidden;
+    padding: 0.5em;
+    box-sizing: border-box;
+    animation-name: divContentWiden;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+@keyframes divContentWiden {
+    0% {background-color: rgba(40, 40, 40, 0);}
+    100% {background-color: rgba(40, 40, 40, 0.1);}
+}
+
+.leftSide {
+    float: left;
+    width: 25%;
+    border-radius: 1em;
+    background-color: rgba(40, 40, 40, 0.1);
+    word-break: break-all;
+    overflow: hidden;
+    padding: 0.5em;
+    box-sizing: border-box;
+    animation-name: leftSide;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+@keyframes leftSide {
+    0% {background-color: rgba(40, 40, 40, 0);}
+    100% {background-color: rgba(40, 40, 40, 0.1);}
+}
+
+.rightSide {
+    float: right;
+    width: 25%;
+    border-radius: 1em;
+    background-color: rgba(40, 40, 40, 0.1);
+    word-break: break-all;
+    overflow: hidden;
+    padding: 0.5em;
+    box-sizing: border-box;
+    animation-name: rightSide;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+@keyframes rightSide {
+    0% {background-color: rgba(40, 40, 40, 0);}
+    100% {background-color: rgba(40, 40, 40, 0.1);}
+}
+
+.divSpectial {
+    margin: auto;
+    width: 75%;
+    border-radius: 1em;
+    background-color: rgba(100,150,250,0.3);
+    overflow: hidden;
+    padding: 0.5em;
+    box-sizing: border-box;
+    animation-name: divSpectial;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+@keyframes divSpectial {
+    0% {background-color: rgba(100,150,250,0);}
+    100% {background-color: rgba(100,150,250,0.3);}
+}
+
+.divMiddle {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1em;
+    padding: 0.5em;
+    border: 0.1em solid rgb(100,150,250);
+    backdrop-filter: blur(0.5em);
+    background-color: rgba(240, 240, 240, 0.3);
+    z-index: 2;
+    box-shadow: 0 0 0.5em rgb(100, 100, 250);
+    box-sizing: border-box;
+}
+
+.divTitle {
+    width: 100%;
+    border-radius: 1em;
+    background-color: rgba(100,150,250,0.3);
+    text-align: center;
+    transition: background-color 0.5s;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+.divTitle:hover {
+    background-color: rgb(100, 100, 250);
+}
+
+.divEnd {
+    width: 100%;
+    border-radius: 1em;
+    background-color: rgba(40, 40, 40, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+.divFloor {
+    margin: auto;
+    width: 75%;
+    text-align: center;
+    align-items: center;
+    border-radius: 1em;
+    border: 0.1em solid rgb(100,150,250);
+    background-color: rgba(100,150,250,0.3);
+    backdrop-filter: blur(0.5em);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+.divIndexMenu {
+    width: 100%;
+    background-color: rgba(100,100,250,0.3);
+    text-align: center;
+    padding: 0.5em;
+    box-sizing: border-box;
+    font-size: 1.5em;
+}
+
+#divMenu {
+    width: 100%;
+    line-height: 2em;
+    background-color: rgba(100,100,250,0.3);
+    position: fixed;
+    text-align: left;
+    visibility: hidden;
+    padding: 0.5em;
+    box-sizing: border-box;
+    z-index: 3;
+}
+#divMenu a {
+    font-size: 1.5em;
+}
+
+.divButton {
+    width: 25%;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    padding: 0.5em;
+    vertical-align:middle;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.divInputZone {
+    width: 75%;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    padding: 0.5em;
+    vertical-align:middle;
+    box-sizing: border-box;
+}
+
+.divFullImg {
+    margin: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-size: cover;
+    background: fixed;
+    z-index: 1;
+}
+
+.divUser {
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    width: 75%;
+    padding: 0.5em;
+    border-radius: 1em;
+    border: 0.1em solid rgb(100,150,250);
+    backdrop-filter: blur(0.5em);
+    background-color: rgba(40,40,40,0.1);
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+/* 全局操作框 */
+button,select {
+    width: 100%;
+    border-radius: 0.5em;
+    background-color: rgba(40,40,40,0.1);
+    border: 0.1em solid rgb(100,150,250);
+    font-size: 1em;
+    line-height: 1em;
+    padding: 0.5em;
+    box-sizing: border-box;
+    margin-top: 0.1em;
+    margin-right: 0.5em;
+    background-color: rgba(240,240,240,0.4);
+    transition: background-color 0.5s;
+}
+button:hover {background-color: rgba(240,240,240,0.8);}
+select:hover {background-color: rgba(240,240,240,0.8);}
+
+input,textarea {
+    width: 100%;
+    border-radius: 0.5em;
+    background-color: rgba(240,240,240,0.4);
+    border: 0.1em solid rgb(100,150,250);
+    font-size: 1em;
+    line-height: 1em;
+    padding: 0.5em;
+    box-sizing: border-box;
+    margin-top: 0.1em;
+    margin-right: 0.5em;
+    color: rgba(240,240,240,0.8);
+    outline: none;
+    transition: color 0.5s;
+    transition: outline 0.5s;
+}
+input:hover {color: rgba(240,240,240,1);outline: 0.2em solid whitesmoke;}
+textarea:hover {color: rgba(240,240,240,1);outline: 0.2em solid whitesmoke;}
+
+table {
+    width: 100%;
+    border: 0.3em solid rgb(100, 150, 250);
+    border-radius: 1em;
+    padding: 0.3em;
+}
+
+table th,td{
+    border: 0.1em solid rgb(100,150,250);
+    border-radius: 0.5em;
+    padding: 0.1em;
+}
+
+/* 窗口自适应 */
+@media screen and (max-width: 800px){
+    * {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    a {
+        font-size: 1.5em;
+    }
+
+    .leftSide {
+        width: 100%;
+        float: none;
+    }
+
+    .rightSide {
+        width: 100%;
+        float: none;
+    }
+
+    .divContent {
+        width: 100%;
+    }
+
+    .divScreen .divShow25 {
+        width: 50%;
+    }
+    .divScreen .divShow50 {
+        width: 100%;
+    }
+
+    button,select {
+        background-color: rgba(240,240,240,0.4);
+        border: 0.1em solid rgb(100,150,250);
+        font-size: 1.5em;
+    }
+
+    input,textarea {
+        width: 75%;
+        font-size: 1.5em;
+        background-color: rgba(240,240,240,0.4);
+        border: 0.1em solid rgb(100,150,250);
+    }
+}
