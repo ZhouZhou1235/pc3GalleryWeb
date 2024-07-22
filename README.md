@@ -1,6 +1,6 @@
 # PINKCANDY
 ## 粉糖粒子-幻想动物画廊
-##第二代
+## 第二代
 
 ![image](https://github.com/user-attachments/assets/207d2110-c99b-46cc-9e7a-5d85224d7161)
 
