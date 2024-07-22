@@ -1,0 +1,42 @@
+<div class="screen">
+    <div class="formBox">
+        <form action="./running/enter.php" method="post">
+            <input type="text" name="username" placeholder="粉糖账号">粉糖账号 必填<br>
+            <input type="password" name="password" placeholder="密码">密码 必填<br>
+            <input type="text" name="name" placeholder="名称">名称<br>
+            <input type="text" name="email" placeholder="邮箱">邮箱 必填<br>
+            <textarea name="info" cols="20" rows="2" placeholder="介绍"></textarea>个兽介绍<br>
+            <select name="sex">
+                <option value="">性别</option>
+                <option value="雄">雄</option>
+                <option value="雌">雌</option>
+                <option value="未知">不想告诉</option>
+            </select>必填
+            <select name="sort">
+                <option value="">种族</option>
+                <option value="犬">犬</option>
+                <option value="猫">猫</option>
+                <option value="龙">龙</option>
+                <option value="狐">狐</option>
+                <option value="马">马</option>
+                <option value="鼠">鼠</option>
+                <option value="牛">牛</option>
+                <option value="兔">兔</option>
+                <option value="蛇">蛇</option>
+            </select>必填
+            <input type="hidden" name="todo" value="1">
+            <button type="submit">注册</button>
+        </form>
+    </div>
+    <div class="txtBox">
+        <h1>注册说明</h1>
+        <h2>欢迎加入粉糖粒子</h2>
+        <p>
+            设置一个<span style="color: red;">五位数字</span>粉糖账号<br>
+            除了名称和介绍，其余均为必填字段。<br>
+            粉糖账号与邮箱唯一对应。确保邮箱<span style="color: red;">正确可用</span>，这是唯一可找回账号密码的途径。<br>
+            若发现邮箱被占用，请联系总管理兽修改。<br>
+        </p>
+        <h2>开发者邮箱 pinkcandyzhou@qq.com</h2>
+    </div>
+</div>

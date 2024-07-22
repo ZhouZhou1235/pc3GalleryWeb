@@ -1,0 +1,33 @@
+<div class="screen">
+    <div class="txtBox">
+        <h1>小兽管理</h1>
+    </div>
+    <div class="formBox">
+        <p>补偿小兽硬币</p>
+        <form action="./running/control.php" method="post">
+            <input type="text" name="username" placeholder="粉糖账号">
+            <input type="text" name="coin" placeholder="补偿硬币数">
+            <input type="hidden" name="todo" value="9">
+            <button type="submit">补偿</button>
+        </form>
+        <form action="./running/control.php" method="post">
+            <p>向小兽发送邮件</p>
+            <input type="text" name="username" placeholder="粉糖账号"><br>
+            <input type="text" name="title" placeholder="标题"><br>
+            <textarea name="content" cols="30" rows="10" placeholder="邮件内容"></textarea><br>
+            <input type="text" name="extra" placeholder="特别语句"><br>
+            <input type="hidden" name="todo" value="10">
+            <button type="submit">发送</button>
+        </form>
+        <form action="./running/control.php" method="post">
+            <p>自定义发送邮件</p>
+            <input type="text" name="email" placeholder="目标邮箱"><br>
+            <input type="text" name="nameStr" placeholder="接受兽称呼"><br>
+            <input type="text" name="title" placeholder="标题"><br>
+            <textarea name="content" cols="30" rows="10" placeholder="邮件内容"></textarea><br>
+            <input type="text" name="extra" placeholder="特别语句"><br>
+            <input type="hidden" name="todo" value="11">
+            <button type="submit">发送</button>
+        </form>
+    </div>
+</div>

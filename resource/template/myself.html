@@ -1,0 +1,70 @@
+<div class="screen">
+    <div class="operateBox">
+        <div class="contentBox">
+            <div class="information">
+                PINKCANDY
+            </div>
+            <div class="formBox">
+                <div class="side">
+                    画廊
+                    <form action="editGallery.php" method="post">
+                        <input type="text" name="galleryId" placeholder="画廊ID">
+                        <button type="submit">编辑画廊</button>
+                    </form>
+                    粉糖账号
+                    <form action="./running/enter.php" method="post" id="logout">
+                        <input type="hidden" name="todo" value="3">
+                        <button type="submit">注销</button>
+                    </form>
+                    <span id="edit"></span>
+                    <a href="./editOther.php">编辑其它</a>
+                </div>
+                <div class="side">
+                    爪记
+                    <div class="formBox">
+                        <form action="./running/upload.php" method="post">
+                            <input type="text" name="title" placeholder="爪记标题"><br>
+                            <textarea name="content" cols="30" rows="10" placeholder="爪记内容......"></textarea><br>
+                            <input type="text" name="galleryId" placeholder="附图（输入画廊ID）">
+                            <input type="hidden" name="todo" value="2">
+                            <button type="submit">发布爪记</button>
+                        </form>
+                        <form action="./running/delete.php" method="post">
+                            <input type="text" name="essayId" placeholder="爪记ID">
+                            <input type="hidden" name="todo" value="6">
+                            <button type="submit">删除爪记</button>
+                        </form>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </div>
+    <div class="infoBox">
+        <h1><span id="name"></span></h1>
+        <h2><span id="more"></span></h2>
+        <p><span id="info"></span></p>
+        <p><span id="watch"></span></p>
+    </div>
+    <span id="userBox"></span>
+</div>
+<script type="text/javascript">
+    var username = `<?php echo "$furryUser";?>`;
+    var name = `<?php echo "$name";?>`;
+    var info = `<?php echo "$info";?>`;
+    var more = `<?php echo "$furryUser $sex $sort";?>`;
+    var watch = `<?php echo "$outStr";?>`;
+    var userBox = `<?php echo "$userBox";?>`;
+    document.getElementById("name").innerHTML=name;
+    document.getElementById("info").innerHTML=info;
+    document.getElementById("more").innerHTML=more;
+    document.getElementById("watch").innerHTML=watch;
+    document.getElementById("userBox").innerHTML=userBox;
+    function add(){
+        var a = document.createElement("a");
+        var link = document.createTextNode("修改个兽信息");
+        a.appendChild(link);
+        txt = "./editUser.php?username="+username;
+        a.href = txt;
+        document.getElementById("edit").appendChild(a);
+    }add();
+</script>

@@ -1,0 +1,60 @@
+<div class="screen">
+    <div class="txtBox">
+        <h1>徽章管理</h1>
+    </div>
+    <div class="formBox">
+        <form action="./running/control.php" method="post">
+            <p>创建一个新徽章</p>
+            <input type="text" name="badge" placeholder="徽章名称">
+            <select name="type" id="type">
+                <option value="">选择徽章种类</option>
+                <option value="1">创作认证</option>
+                <option value="2">身份认证</option>
+                <option value="3">常规</option>
+            </select>
+            <input type="hidden" name="todo" value="3">
+            <button type="submit">创建</button>
+        </form>
+        <form action="./running/control.php" method="post">
+            <p>爪动给予徽章给小兽</p>
+            <input type="text" name="username" placeholder="粉糖账号">
+            <input type="text" name="code" placeholder="徽章号码">
+            <input type="hidden" name="todo" value="5">
+            <button type="submit">给予</button>
+        </form>
+        <form action="./running/control.php" method="post">
+            <p>更改徽章名称</p>
+            <input type="text" name="code" placeholder="徽章号码">
+            <input type="text" name="badgeName" placeholder="新徽章名称">
+            <input type="hidden" name="todo" value="8">
+            <button type="submit">更改</button>
+        </form>
+        <div class="txtBox">
+            <h2 style="color: red;">危险区域</h2>
+            <p style="color: red;">此处的管理兽操作谨慎执行</p>
+            <form action="./running/control.php" method="post">
+                <p>创建特殊徽章</p>
+                <input type="text" name="badge" placeholder="徽章名称">
+                <input type="hidden" name="todo" value="4">
+                <button type="submit">创建</button>
+            </form>    
+            <form action="./running/control.php" method="post">
+                <p>撤下某小兽的徽章</p>
+                <input type="text" name="username" placeholder="粉糖账号">
+                <input type="text" name="code" placeholder="徽章号码">
+                <input type="hidden" name="todo" value="6">
+                <button type="submit">撤下</button>
+            </form>    
+            <form action="./running/control.php" method="post">
+                <p>删除徽章</p>
+                <p style="color: red;">向所有拥有的小兽收回此徽章并摧毁</p>
+                <input type="text" name="code" placeholder="徽章号码">
+                <input type="hidden" name="todo" value="7">
+                <button type="submit">删除此徽章</button>
+            </form>
+        </div>
+    </div>
+    <div class="txtBox">
+        <span id=""></span>
+    </div>
+</div>

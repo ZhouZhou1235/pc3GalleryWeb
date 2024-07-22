@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250">
+<path style="fill:#000000; stroke:none;" d="M0 0L0 250L250 250L250 0L0 0z"/>
+<path style="fill:#ffffff; stroke:none;" d="M25 25L25 100L100 100L100 25L25 25z"/>
+<path style="fill:#6496c8; stroke:none;" d="M100 25L100 100L25 100L25 150L100 150L100 225L150 225L150 150L225 150L225 100L150 100L150 25L100 25z"/>
+<path style="fill:#ffffff; stroke:none;" d="M150 25L150 100L225 100L225 25L150 25z"/>
+<path style="fill:#6496c8; stroke:none;" d="M50 50L50 75L75 75L75 50L50 50M175 50L175 75L200 75L200 50L175 50z"/>
+<path style="fill:#ffffff; stroke:none;" d="M25 150L25 225L100 225L100 150L25 150M150 150L150 225L225 225L225 150L150 150z"/>
+<path style="fill:#6496c8; stroke:none;" d="M50 175L50 200L75 200L75 175L50 175M175 175L175 200L200 200L200 175L175 175z"/>
+</svg>

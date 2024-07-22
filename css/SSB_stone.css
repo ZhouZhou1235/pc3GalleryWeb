@@ -1,0 +1,797 @@
+@charset "UTF-8";
+/*
+ * 闪星方块
+ * 版权所有 粉糖粒子周周
+ * pinkcandy.top
+ * copyright by pinkcandyzhou
+ */
+/* 全局基本 */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif, monospace;
+  font-size: 100%;
+  font-weight: normal;
+  background-image: linear-gradient(0deg, #212529, #343a40);
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: #f8f9fa;
+}
+
+a {
+  font-size: 1em;
+  font-weight: bold;
+  transition: color 0.5s;
+}
+a:link {
+  color: #13c4a3;
+}
+a:visited {
+  color: #13c4a3;
+}
+a:hover {
+  color: #36f1cd;
+}
+a:active {
+  color: #36f1cd;
+}
+
+/* 导航栏 */
+#menu {
+  width: 95%;
+  float: right;
+  position: relative;
+  text-align: left;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #343a40;
+  z-index: 5;
+  overflow: hidden;
+}
+#menu img {
+  height: 5em;
+  vertical-align: middle;
+}
+#menu span {
+  font-size: 3em;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#menuFull {
+  width: 100%;
+  float: right;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #343a40;
+  z-index: 5;
+  overflow: hidden;
+}
+#menuFull img {
+  height: 5em;
+  vertical-align: middle;
+}
+#menuFull span {
+  font-size: 3em;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#menuPhone {
+  width: 100%;
+  float: right;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #343a40;
+  z-index: 5;
+  overflow: hidden;
+  white-space: wrap;
+  visibility: hidden;
+}
+#menuPhone img {
+  height: 3em;
+  vertical-align: middle;
+}
+#menuPhone span {
+  font-size: 2em;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#menuSide {
+  width: 5%;
+  height: 100%;
+  float: left;
+  position: fixed;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #495057;
+  padding: 0.5em;
+  z-index: 4;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#menuSide img {
+  width: 100%;
+  vertical-align: middle;
+  transition: box-shadow 0.5s;
+}
+#menuSide img:hover {
+  box-shadow: 0 0 0 0.5em #f8f9fa;
+}
+#menuSide span {
+  font-size: 2em;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+#menuSide ul {
+  width: 100%;
+  position: relative;
+}
+#menuSide li {
+  width: 100%;
+  display: block;
+  padding: 0.5em 0em;
+}
+#menuSide a {
+  display: block;
+  font-weight: bold;
+}
+
+#menuSearch {
+  width: auto;
+  text-align: left;
+  align-items: center;
+  background-color: #495057;
+}
+#menuSearch input, #menuSearch button {
+  font-size: 1.2em;
+  padding: 0.25em;
+  vertical-align: middle;
+  border: 0em;
+  margin: 0em;
+  background-color: #dee2e65c;
+}
+
+#loginBox {
+  width: 100%;
+  background-color: #dee2e65c;
+  text-align: left;
+  font-size: 0.8em;
+}
+#loginBox button {
+  font-size: 1.2em;
+  padding: 0.25em;
+  vertical-align: middle;
+  border: 0em;
+  margin: 0em;
+  background-color: #b8d0eb;
+}
+
+/* 网页内容 */
+.screen {
+  width: 95%;
+  position: relative;
+  float: right;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.screenFull {
+  width: 100%;
+  position: relative;
+  float: right;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.galleryBox {
+  width: 95%;
+  position: relative;
+  float: right;
+  font-size: 1.5em;
+  columns: 5;
+  column-gap: 0.5em;
+  box-sizing: border-box;
+  padding: 0.25em;
+}
+.galleryBox canvas {
+  width: 100%;
+}
+
+.formBox {
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  float: left;
+  text-align: left;
+  padding: 0.25em;
+}
+.formBox .side {
+  width: 50%;
+  float: left;
+  display: block;
+  box-sizing: border-box;
+  text-align: left;
+}
+.formBox button, .formBox select, .formBox input, .formBox textarea {
+  background-color: #b8d0eb;
+  font-size: 0.8em;
+  padding: 0.25em;
+  border: 0;
+  margin: 0.25em;
+  vertical-align: middle;
+}
+.formBox input, .formBox textarea {
+  box-sizing: border-box;
+}
+
+.showPic {
+  width: 100%;
+  max-height: 32em;
+  overflow-y: scroll;
+  margin: auto;
+  text-align: center;
+}
+.showPic img {
+  width: 90%;
+  margin: 0.3em;
+}
+
+.showGalleryIndex {
+  position: relative;
+  overflow: hidden;
+  break-inside: avoid;
+  text-align: left;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  transition: box-shadow 0.5s;
+  z-index: 4;
+  box-sizing: border-box;
+  padding: 0.25em;
+  background-color: #4c60855c;
+  margin-bottom: 0.5em;
+}
+.showGalleryIndex:hover {
+  position: relative;
+  overflow-y: scroll;
+  box-shadow: 0 0 0 0.25em #f8f9fa;
+  z-index: 5;
+}
+.showGalleryIndex h1 {
+  font-size: 1.2em;
+  color: #39a0ed;
+  transition: background-color 1s;
+}
+.showGalleryIndex h1:hover {
+  background-color: #f8f9fa2c;
+}
+.showGalleryIndex h2 {
+  font-size: 1em;
+  color: #b8d0eb;
+  transition: background-color 1s;
+}
+.showGalleryIndex h2:hover {
+  background-color: #f8f9fa2c;
+}
+.showGalleryIndex p {
+  font-size: 0.8em;
+}
+.showGalleryIndex img {
+  width: 100%;
+}
+.showGalleryIndex button {
+  background-color: #b8d0eb;
+  font-size: 0.8em;
+  padding: 0.25em;
+  border: 0;
+  margin: 0;
+}
+
+.showGallery {
+  overflow: hidden;
+  break-inside: avoid;
+  text-align: center;
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding: 0.25em;
+}
+.showGallery .firstSide {
+  width: 60%;
+  float: left;
+  display: block;
+  box-sizing: border-box;
+}
+.showGallery .secondSide {
+  width: 40%;
+  float: left;
+  display: block;
+  box-sizing: border-box;
+}
+.showGallery .secondSide .txtBox .information {
+  border: 0.25em solid #f8f9fa;
+  text-wrap: wrap;
+  white-space: pre-line;
+}
+.showGallery img {
+  width: 90%;
+  margin: 0.3em;
+}
+
+.previewGallery {
+  position: relative;
+  display: contents;
+}
+.previewGallery .galleryTitle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.25;
+  transition: all 0.5s;
+  z-index: 6;
+  font-size: 1.2em;
+  color: #39a0ed;
+  font-weight: bold;
+  text-shadow: 0em 0em 0.1em #adb5bd;
+}
+.previewGallery .galleryTitle:hover {
+  opacity: 1;
+}
+.previewGallery .imgBox {
+  position: relative;
+  display: inline-block;
+}
+.previewGallery .imgBox img {
+  max-width: 20em;
+  height: 10em;
+  overflow: hidden;
+  transition: box-shadow 0.5s;
+  z-index: 4;
+}
+.previewGallery .imgBox img:hover {
+  position: relative;
+  box-shadow: 0 0 0 0.25em #f8f9fa;
+  z-index: 5;
+}
+
+.infoBox {
+  width: 100%;
+  font-size: 1.2em;
+  margin: auto;
+  padding: 0.25em;
+  box-sizing: border-box;
+  text-align: left;
+  white-space: pre-line;
+}
+.infoBox h1 {
+  font-size: 1.4em;
+  color: #39a0ed;
+}
+.infoBox h2 {
+  font-size: 1.2em;
+  color: #b8d0eb;
+}
+.infoBox p {
+  font-size: 1em;
+  color: #e9ecef;
+}
+
+.txtBox {
+  width: 100%;
+  font-size: 1em;
+  font-weight: normal;
+  margin: auto;
+  text-align: left;
+  text-wrap: wrap;
+}
+.txtBox h1 {
+  font-size: 1.2em;
+  color: #39a0ed;
+}
+.txtBox h2 {
+  font-size: 1em;
+  color: #b8d0eb;
+}
+.txtBox p {
+  font-size: 0.8em;
+  color: #e9ecef;
+}
+.txtBox pre {
+  border: 0.25em solid #f8f9fa;
+  overflow: hidden;
+  text-wrap: inherit;
+  text-wrap: wrap;
+}
+
+.boardBox {
+  columns: 5;
+  column-gap: 0.5em;
+}
+.boardBox .txtBox {
+  width: 100%;
+  margin: 0;
+}
+
+#showInput, #showTags {
+  font-size: 1em;
+  font-weight: bolder;
+  color: blue;
+}
+
+#starFormBox {
+  width: 100%;
+}
+#starFormBox button {
+  width: 100%;
+  background-color: #b8d0eb;
+  font-size: 0.6em;
+  padding: 0.25em;
+  border: 0;
+  margin: 0;
+}
+
+.userBox {
+  width: 100%;
+  position: relative;
+  float: left;
+  display: flex;
+}
+.userBox .leftSide {
+  width: 60%;
+}
+.userBox .leftSide .galleryBox {
+  columns: 3;
+  font-size: 1em;
+  width: 100%;
+}
+.userBox .rightSide {
+  width: 40%;
+}
+.userBox .rightSide .essayBox {
+  text-align: left;
+  font-size: 1em;
+  text-wrap: wrap;
+  max-height: 32em;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 0.25em;
+  background-color: #4c60855c;
+  margin: 0.25em;
+}
+.userBox .rightSide .essayBox h1 {
+  color: #39a0ed;
+  font-size: 1em;
+}
+.userBox .rightSide .essayBox h2 {
+  color: #b8d0eb;
+  font-size: 0.8em;
+  background-color: none;
+  transition: all 1s;
+}
+.userBox .rightSide .essayBox h2 :hover {
+  background-color: #f8f9fa2c;
+}
+.userBox .rightSide .essayBox p {
+  font-size: 0.8em;
+  white-space: pre-line;
+  text-wrap: wrap;
+  color: #e9ecef;
+}
+
+.userBoxIndex {
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  color: skyblue;
+  background-color: cadetblue;
+}
+
+.operateBox {
+  position: relative;
+  width: 100%;
+  font-size: 1em;
+  float: right;
+  z-index: 5;
+}
+.operateBox .information {
+  width: 50%;
+  margin: auto;
+  position: relative;
+  height: 1em;
+  line-height: 100%;
+  font-size: 1em;
+  text-align: center;
+  background-color: #dee2e65c;
+  transition: all 1s;
+}
+.operateBox .information:hover {
+  font-size: 1.2em;
+}
+.operateBox .contentBox {
+  width: 100%;
+  position: absolute;
+  font-size: 1em;
+  height: 1em;
+  overflow-y: hidden;
+  text-align: left;
+  transition: all 1s;
+  background-color: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  z-index: 5;
+}
+.operateBox .contentBox:hover {
+  height: 25em;
+  overflow-y: scroll;
+  background-color: #dee2e65c;
+}
+
+.statementBox {
+  width: 100%;
+  font-size: 1em;
+  text-align: left;
+  font-weight: bold;
+  background-color: #4c60855c;
+  color: #f8f9fa;
+}
+
+.commentsBox {
+  width: 100%;
+  font-size: 0.8em;
+  text-align: left;
+  text-wrap: wrap;
+}
+.commentsBox h1 {
+  color: #39a0ed;
+}
+.commentsBox h2 {
+  color: #b8d0eb;
+  font-size: 0.8em;
+}
+.commentsBox p {
+  color: #e9ecef;
+  font-size: 0.8em;
+}
+
+/* 网页内容 */
+@media screen and (max-width: 1200px) {
+  #menu {
+    width: 90%;
+  }
+
+  #menuSide {
+    width: 10%;
+  }
+
+  .screen {
+    width: 90%;
+  }
+
+  .galleryBox {
+    width: 90%;
+    columns: 4;
+    column-gap: 0.5em;
+  }
+
+  .boardBox {
+    columns: 4;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #menu {
+    width: 90%;
+  }
+
+  #menuSide {
+    width: 10%;
+  }
+
+  .screen {
+    width: 90%;
+  }
+
+  .galleryBox {
+    width: 90%;
+    columns: 3;
+    column-gap: 0.5em;
+  }
+
+  .boardBox {
+    columns: 3;
+  }
+}
+@media screen and (max-width: 800px) {
+  #menu {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+
+  #menuSide {
+    visibility: hidden;
+  }
+
+  .screen {
+    width: 100%;
+  }
+
+  .galleryBox {
+    width: 100%;
+    columns: 2;
+    column-gap: 0.5em;
+  }
+
+  .boardBox {
+    columns: 2;
+  }
+
+  * {
+    font-size: 1em;
+  }
+
+  .showGalleryIndex h1 {
+    font-size: 1em;
+  }
+
+  .showGalleryIndex h2, p {
+    font-size: 0.8em;
+  }
+
+  .infoBox h1 {
+    font-size: 1em;
+  }
+
+  .infoBox h2, p {
+    font-size: 0.8em;
+  }
+
+  .txtBox h1 {
+    font-size: 1em;
+  }
+
+  .txtBox h2, p {
+    font-size: 0.8em;
+  }
+
+  #menuPhone {
+    position: relative;
+    visibility: visible;
+  }
+
+  #menuSearch {
+    margin: auto;
+    position: relative;
+  }
+
+  .formBox .side {
+    width: 100%;
+  }
+
+  .showGallery .firstSide {
+    width: 100%;
+  }
+
+  .showGallery .secondSide {
+    width: 100%;
+  }
+
+  .userBox .leftSide {
+    width: 50%;
+  }
+
+  .userBox .rightSide {
+    width: 50%;
+  }
+
+  .userBox .leftSide .galleryBox {
+    columns: 1;
+  }
+}
+@media screen and (max-width: 600px) {
+  #menu {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+
+  #menuSide {
+    visibility: hidden;
+  }
+
+  .screen {
+    width: 100%;
+  }
+
+  .galleryBox {
+    width: 100%;
+    columns: 1;
+    column-gap: 0.5em;
+  }
+
+  .boardBox {
+    columns: 1;
+  }
+
+  * {
+    font-size: 1em;
+  }
+
+  .showGalleryIndex h1 {
+    font-size: 1em;
+  }
+
+  .showGalleryIndex h2, p {
+    font-size: 0.8em;
+  }
+
+  .infoBox h1 {
+    font-size: 1em;
+  }
+
+  .infoBox h2, p {
+    font-size: 0.8em;
+  }
+
+  .txtBox h1 {
+    font-size: 1em;
+  }
+
+  .txtBox h2, p {
+    font-size: 0.8em;
+  }
+
+  #menuPhone {
+    position: relative;
+    visibility: visible;
+  }
+
+  #menuSearch {
+    margin: auto;
+    position: relative;
+  }
+
+  .formBox .side {
+    width: 100%;
+  }
+
+  .showGallery .firstSide {
+    width: 100%;
+  }
+
+  .showGallery .secondSide {
+    width: 100%;
+  }
+
+  .userBox .leftSide {
+    width: 50%;
+  }
+
+  .userBox .rightSide {
+    width: 50%;
+  }
+
+  .userBox .leftSide .galleryBox {
+    columns: 1;
+  }
+}

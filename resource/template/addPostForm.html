@@ -1,0 +1,28 @@
+<div class="screen">
+    <div class="homePageBox">
+        <div class="homePage_leftSide">
+            <div class="formBox">
+                <form action="./running/upload.php" method="post" enctype="multipart/form-data">
+                    <input type="text" name="title" placeholder="主题贴标题">主题贴标题<br>
+                    <input type="text" name="subtitle" placeholder="副标题">副标题<br>
+                    <textarea name="content" cols="30" rows="10" placeholder="说点什么......"></textarea>
+                    <textarea name="tags" cols="30" rows="10" placeholder="标签"></textarea><br>
+                    <input type="text" name="galleryId" placeholder="画廊ID">插入镇楼图<br>
+                    <input type="file" name="postImg">或上传镇楼图<br>
+                    <input type="hidden" name="todo" value="3">
+                    <button>发布</button>
+                </form>
+            </div>
+        </div>
+        <div class="homePage_rightSide">
+            <div class="txtBox">
+                <h1>发布新帖子</h1>
+                <h2>在小兽花园添加新盆栽</h2>
+                <p>
+                    至少填写标题和正文
+                    多个标签用空格分隔开
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

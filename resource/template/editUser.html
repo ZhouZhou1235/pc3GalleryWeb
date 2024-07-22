@@ -1,0 +1,48 @@
+<div class="screen">
+    <div class="txtBox">
+        <h1>修改 <span id="furryUser"></span> 的个兽信息</h1>
+        <h2>修改花费50硬币</h2>
+    </div>
+    <div class="formBox">
+        <form action="./running/edit.php" method="post">
+            <input type="password" name="password" placeholder="重新设置密码">重新设置密码<br>
+            <input type="text" name="name" placeholder="名称" id="name">名称<br>
+            <textarea name="info" cols="20" rows="2" placeholder="介绍" id="info"></textarea>介绍<br>
+            <input type="text" name="email" placeholder="邮箱" id="email">邮箱<br>
+            <select name="sex" id="sex">
+                <option value="">性别</option>
+                <option value="雄">雄</option>
+                <option value="雌">雌</option>
+                <option value="未知">不想告诉</option>
+            </select>
+            <select name="sort" id="sort">
+                <option value="">种族</option>
+                <option value="犬">犬</option>
+                <option value="猫">猫</option>
+                <option value="龙">龙</option>
+                <option value="狐">狐</option>
+                <option value="马">马</option>
+                <option value="鼠">鼠</option>
+                <option value="牛">牛</option>
+                <option value="兔">兔</option>
+                <option value="蛇">蛇</option>
+            </select>
+            <input type="hidden" name="todo" value="1">
+            <button type="submit">修改</button>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    var furryUser = `<?php echo "$name $sex $sort";?>`;
+    var name = `<?php echo "$name";?>`;
+    var info = `<?php echo "$info";?>`;
+    var email = `<?php echo "$email";?>`;
+    var sex = `<?php echo "$sex";?>`;
+    var sort = `<?php echo "$sort";?>`;
+    document.getElementById("furryUser").innerHTML=furryUser;
+    document.getElementById("name").value=name;
+    document.getElementById("info").value=info;
+    document.getElementById("email").value=email;
+    document.getElementById("sex").value=sex;
+    document.getElementById("sort").value=sort;
+</script>

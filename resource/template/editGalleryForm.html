@@ -1,0 +1,61 @@
+<div class="screen">
+    <div class="txtBox">
+        <h1>编辑画廊</h1>
+        <h2>修改花费10硬币</h2>
+    </div>
+    <div class="formBox">
+        <div class="side">
+            <form action="./running/edit.php" method="post" enctype="multipart/form-data">
+                <input type="text" name="title" placeholder="作品标题" id="title">标题<br>
+                <textarea name="info" cols="30" rows="10" placeholder="作品说明" id="info"></textarea>作品说明<br>
+                <select name="type" id="type">
+                    <option value="">作品类型</option>
+                    <option value="1">原创</option>
+                    <option value="2">二次创作</option>
+                    <option value="3">改图</option>
+                    <option value="4">转载</option>
+                    <option value="5">照片</option>
+                </select>
+                <select name="visit" id="visit">
+                    <option value="">浏览分级</option>
+                    <option value="1">安全</option>
+                    <option value="2">幼兽不宜</option>
+                    <option value="3">警告</option>
+                </select>
+                <input type="hidden" name="todo" value="2">
+                <span id="galleryId"></span>
+                <button type="submit">确认修改</button>
+            </form>
+        </div>
+        <div class="side">
+            <div class="showPic">
+                <span id="img"></span>
+            </div>    
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    // 显示图片
+    var username = '<?php echo "$username";?>';
+    var img = '<?php echo "$file";?>';
+    var f = document.createElement("img");
+    f.src = "./gallery/"+username+"/"+img;
+    f.alt = img;
+    document.getElementById("img").appendChild(f);
+    // 得到画廊ID
+    var galleryId = '<?php echo "$galleryId";?>';
+    var id = document.createElement("input");
+    id.type = "hidden";
+    id.name = "galleryId";
+    id.value = galleryId;
+    document.getElementById("galleryId").appendChild(id);
+    // 载入当前保存
+    var title = `<?php echo "$title";?>`;
+    var info = `<?php echo "$info";?>`;
+    var type = `<?php echo "$type";?>`;
+    var visit = `<?php echo "$visit";?>`;
+    document.getElementById("title").value=title;
+    document.getElementById("info").value=info;
+    document.getElementById("type").value=type;
+    document.getElementById("visit").value=visit;
+</script>

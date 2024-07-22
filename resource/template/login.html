@@ -1,0 +1,43 @@
+<div class="screenFull">
+    <div class="formBox">
+        <div class="side">
+            <img src="./resource/svg/welcome.svg" alt="welcome" width="100%">
+        </div>
+        <div class="side">
+            <div class="operateBox">
+                <div class="contentBox">
+                    <div class="information">
+                        其它选项
+                    </div>
+                    <p>注册粉糖账号</p>
+                    <a href="./register.php"><button>注册</button></a>
+                    <p>忘记密码</p>
+                    <div class="formBox">
+                        <form action="./running/enter.php" method="post">
+                            <p>邮箱</p>
+                            <input type="text" name="email" placeholder="输入邮箱获取验证码">
+                            <input type="hidden" name="todo" value="4">
+                            <button type="submit">获取</button>
+                        </form>
+                        <form action="./running/enter.php" method="post">
+                            <p>重新设置密码</p>
+                            <input type="text" name="password" placeholder="重新设置密码">
+                            <p>验证码</p>
+                            <input type="text" name="resetCode" placeholder="验证码">
+                            <input type="hidden" name="todo" value="5">
+                            <button type="submit">重置</button>
+                        </form>
+                    </div>    
+                </div>
+            </div>
+            <form action="./running/enter.php" method="post">
+                <p>小兽</p>
+                <input type="text" name="username" placeholder="粉糖账号/邮箱" id="username">
+                <p>密码</p>
+                <input type="password" name="password" placeholder="密码" id="password">
+                <input type="hidden" name="todo" value="2">
+                <button type="submit">登录</button>
+            </form>
+        </div>
+    </div>
+</div>

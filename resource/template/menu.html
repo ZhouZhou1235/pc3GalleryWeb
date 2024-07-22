@@ -1,0 +1,138 @@
+<div id="menu">
+    <img src="./resource/svg/pinkcandy.svg" alt="pinkcandy">
+    <span>粉糖粒子</span>
+    <div id="menuSearch">
+        <button><a href="./index.php">粉糖粒子</a></button>
+        <button><a href="./user.php">空间</a></button>
+        <button><a href="./star.php">收藏</a></button>
+        <button><a href="./watch.php">关注</a></button>
+        <button><a href="./uploadGallery.php">上传</a></button>
+        <button><a href="./addPost.php">发布</a></button>
+        <button><a href="./tags.php">标签</a></button>
+        <button><a href="./board.php">留言板</a></button>
+        <button><a href="./lab.php">实验室</a></button>
+        <button><a href="./about.php">关于</a></button>
+        <input type="text" name="search" id="try" placeholder="标签搜索" onchange="getInput(this.value)">
+        <button type="submit" onclick="returnSearch()">搜索</button>
+    </div>
+</div>
+<div id="menuSide">
+    <ul>
+        <li>
+            <a href="./index.php"><img src="./resource/svg/logo_small.svg" alt="logo_small"></a>
+            <div class="menuInfo">
+                <h1>粉糖粒子</h1>
+                <h2>回到首页</h2>
+                <p>变成毛绒绒的形状！</p>
+                <img src="/resource/img/wolf.png" alt="wolf.png">
+            </div>
+        </li>
+        <li>
+            <a href="./user.php"><img src="./resource/svg/menu_user.svg" alt="个兽空间"></a>
+            <div class="menuInfo">
+                <h1>个兽空间</h1>
+                <h2>小兽的专属空间</h2>
+                <img src="/resource/svg/menu_user.svg" alt="menu_user.svg">
+            </div>
+        </li>
+        <li>
+            <a href="./star.php"><img src="./resource/svg/menu_star.svg" alt="收藏"></a>
+            <div class="menuInfo">
+                <h1>收藏</h1>
+                <h2>添加的收藏都在这里</h2>
+                <img src="/resource/svg/menu_star.svg" alt="menu_star.svg">
+            </div>
+        </li>
+        <li>
+            <a href="./watch.php"><img src="./resource/svg/menu_watch.svg" alt="关注"></a>
+            <div class="menuInfo">
+                <h1>关注</h1>
+                <h2>别错过更新哦</h2>
+                <img src="/resource/svg/menu_watch.svg" alt="menu_watch.svg">
+            </div>
+        </li>
+        <li>
+            <a href="./uploadGallery.php"><img src="./resource/svg/menu_upload.svg" alt="上传"></a>
+            <div class="menuInfo">
+                <h1>上传</h1>
+                <h2>上传一张新画廊作品</h2>
+                <p>先阅读发布说明！</p>
+                <img src="/resource/svg/menu_upload.svg" alt="menu_upload.svg">
+            </div>
+        </li>
+        <li>
+            <a href="./addPost.php"><img src="./resource/svg/menu_addPost.svg" alt="发布"></a>
+            <div class="menuInfo">
+                <h1>发布</h1>
+                <h2>在小兽花园发布新帖子</h2>
+                <img src="/resource/svg/menu_addPost.svg" alt="menu_addPost.svg">
+            </div>
+        </li>
+        <li>
+            <a href="./tags.php"><img src="./resource/svg/menu_tags.svg" alt="标签墙纸"></a>
+            <div class="menuInfo">
+                <h1>标签墙纸</h1>
+                <h2>贴好标签后画廊可以被搜索</h2>
+                <img src="/resource/svg/menu_tags.svg" alt="menu_tags.svg">
+            </div>
+        </li>
+    </ul>
+</div>
+<div id="menuPhone">
+    <a href="./index.php"><img src="./resource/svg/logo_small.svg" alt="logo_small"></a>
+    <a href="./user.php"><img src="./resource/svg/menu_user.svg" alt="个兽空间"></a>
+    <a href="./star.php"><img src="./resource/svg/menu_star.svg" alt="收藏"></a>
+    <a href="./watch.php"><img src="./resource/svg/menu_watch.svg" alt="关注"></a>
+    <a href="./uploadGallery.php"><img src="./resource/svg/menu_upload.svg" alt="上传"></a>
+    <a href="./addPost.php"><img src="./resource/svg/menu_addPost.svg" alt="发布"></a>
+    <a href="./tags.php"><img src="./resource/svg/menu_tags.svg" alt="标签墙纸"></a>
+</div>
+<div class="screen">
+    <div class="searchBox">
+        <span id="showInput"></span>
+        <span id="showTags"></span>
+        <span id="search"></span>
+    </div>
+</div>
+<script>
+    window.addEventListener("error",e=>{
+        console.log("pinkcandy js load error");
+    });
+</script>
+<script>
+    function getInput(str){
+        document.getElementById("showInput").innerHTML=str;
+        var xmlhttp;
+        var preSearch = str;
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function(){
+            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                document.getElementById("showTags").innerHTML=xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("post","./running/send.php",true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("preSearch="+preSearch);
+    }
+    function returnSearch(){
+        var xmlhttp;
+        var search = document.getElementById("try").value;
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function(){
+            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                document.getElementById("search").innerHTML=xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("post","./running/send.php",true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        let todo = 4;
+        let sendContent = "todo="+todo+"&"+"search="+search;
+        xmlhttp.send(sendContent);
+    }
+    function searchTheTag(tag){
+        var search =document.getElementById("try");
+        search.value = tag;
+        returnSearch();
+    }
+    window.onload=function(){}
+</script>
