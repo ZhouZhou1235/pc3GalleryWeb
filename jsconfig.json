@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./ViewMachine/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
