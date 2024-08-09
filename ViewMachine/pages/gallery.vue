@@ -119,6 +119,11 @@ import { faBookOpen, faCalendar, faComment, faPaw, faStar, faTags } from '@forta
                                 </div>
                             </div>
                         </div>
+                        <div class="card-text">
+                            <span v-for="item in myGalleryData.badges">
+                                <span class="badge rounded-pill bg-info">{{ item.title }}</span>
+                            </span>
+                        </div>
                         <div class="card-body">
                             {{ myGalleryData.userInfo }}
                         </div>

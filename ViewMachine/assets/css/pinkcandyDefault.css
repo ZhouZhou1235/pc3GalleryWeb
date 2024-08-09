@@ -18,13 +18,13 @@ a {
     font-weight: lighter;
 }
 .container {
-    background-color: #bad7df;
+    background-color: #FAFAFA;
 }
 .card {
-    background-color: #dbe2ef;
+    background-color: #F5F5F5;
 }
 .badge {
-    background-color: #07689f;
+    background-color: #9E9E9E;
 }
 .btn {
     font-weight: bolder;
@@ -32,22 +32,22 @@ a {
 
 /* PinkCandy */
 .galleryBox {
-    background-color: #c9d6df;
+    background-color: #ECEFF1;
 }
 .postBox {
-    background-color: #f0f5f9;
+    background-color: #ECEFF1;
 }
 .webImpression {
-    background-color: #ffcef3;
+    background-color: #E1F5FE;
     font-size: 2em;
 }
 .webImpression img {width: 50%;}
 .webMenu {
-    background-color: #d6e6f2;
-    color: #769fcd;
+    background-color: #B3E5FC;
+    color: #4FC3F7;
 }
 .tags {
-    background-color: #cabbe9;
+    background-color: #64B5F6;
 }
 .squareBox {
     position: relative;
@@ -69,7 +69,7 @@ a {
     transform: translate(-50%, -50%);
 }
 .backImageBox {
-    background-color: antiquewhite;
+    background-color: FAFAFA;
     min-height: 10em;
     max-height: 20em;
     overflow: hidden;

@@ -60,8 +60,9 @@ import { faClover, faEye, faFeather, faPaintRoller, faSquarePlus } from '@fortaw
                         <font-awesome-icon :icon="faClover" />
                         粉丝<div class="badge">{{ userData.watcherNum }}</div>
                     </button>
-                    <!-- <span class="badge">xxx</span>
-                    <span class="badge">xxx</span> -->
+                    <span v-for="item in userData.badges">
+                        <span class="badge rounded-pill bg-info">{{ item.title }}</span>
+                    </span>
                     <p>
                         {{ userData.joinTime }} 加入粉糖<br>
                         <font-awesome-icon :icon="faFeather" />

@@ -185,7 +185,8 @@ import { faCalendar, faClockRotateLeft, faImage, faLeaf, faPaw, faStar, faTags }
                 this.formAddPostComment["postID"] = this.myPostID;
                 let fileMover = new FileMover();
                 fileMover.fileUpload(this.formAddPostComment);
-                this.content = "";
+                this.formAddPostComment["content"] = "";
+                this.formAddPostComment["file"] = "";
                 this.haveLoad=false;this.$nextTick(()=>{this.haveLoad=true});
             }
         },

@@ -50,14 +50,9 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
                                         </form>
                                         <h3>登录例</h3>
                                         <p>
-                                            粉糖粒子是五位数字<br>
+                                            粉糖账号是五位数字<br>
                                             密码是5-20长度的字母数字<br>
-                                            例如<br>
-                                            粉糖账号 10000<br>
-                                            密码 123456<br>
                                             如果忘记粉糖账号 可以用绑定的邮箱替代<br>
-                                            粉糖账号 pinkcandyzhou@qq.com<br>
-                                            密码 123456<br>
                                             忘记密码请点重置<br>
                                         </p>
                                     </div>
@@ -107,10 +102,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
                                         <p>
                                             欢迎加入粉糖粒子<br>
                                             创建一个五位数字粉糖账号 粉糖账号不可更改<br>
-                                            密码只能是5-20的字母数字<br>
                                             粉糖账号需要与一个有效邮箱对应。确保邮箱正确可用，因为这是唯一可找回账号密码的途径。<br>
-                                            设置粉糖账号密码用于验证身份<br>
+                                            设置粉糖账号密码用于验证身份 只能是5-20的字母数字<br>
                                             名称、头像、背景墙等内容稍后可以到小兽空间设置。<br>
+                                            注册失败可能是因为该粉糖账号已被使用，请更换重试。<br>
                                             若发现邮箱被占用，请联系总管理兽修改。<br>
                                             开发者邮箱 pinkcandyzhou@qq.com<br>
                                         </p>

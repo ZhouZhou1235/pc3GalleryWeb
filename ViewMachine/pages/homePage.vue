@@ -22,7 +22,7 @@ import arr_post from '@/components/arr/arr_post.vue';
                 </div>
                 <div class="col-sm-8 galleryBox">
                     <div class="row row-cols-1 row-cols-md-2 g-4">
-                        <arr_gallery :mode="1" :username="null"></arr_gallery>
+                        <arr_gallery :mode="6" :username="null"></arr_gallery>
                     </div>
                 </div>
             </div>
