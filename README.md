@@ -5,13 +5,13 @@
 
 # 幻想动物画廊
 **网站 https://gallery.pinkcandy.top** <br />
-**后端 https://gallery-system.pinkcandy.top** <br />
+**后台 https://gallery-system.pinkcandy.top** <br />
 
 
 ## 描述
-幻想动物画廊是一个非盈利毛绒绒主题中文艺术网站，用户能发布有关毛绒绒的绘画作品。<br />
-欢迎访问粉糖画廊代码仓库，本项目由小蓝狗周周长期维护。<br />
-技术栈：TypeScript, JavaScript, React, Vite, PHP, Slim, Eloquent ORM, MySQL<br />
+幻想动物画廊是毛茸茸主题中文艺术图站，用户可以发布各类拟人小动物绘画作品。<br />
+本网站为周周在校学习计算机编写的招牌项目，欢迎交流学习。<br />
+技术栈：TypeScript, JavaScript, PHP, React, Slim, MySQL<br />
 
 
 ## 开发

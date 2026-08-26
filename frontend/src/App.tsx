@@ -8,7 +8,6 @@ import { UserZoom } from "./view/UserZoom"
 import { Add } from "./view/Add"
 import { About } from "./view/About"
 import { Artwork } from "./view/Artwork"
-import { Tag } from "./view/Tag"
 import { HomePage } from "./view/HomePage"
 import { MyZoom } from "./view/MyZoom"
 import { Notice } from "./view/Notice"
@@ -33,7 +32,6 @@ function App(){
                         <Route path="/add" element={<Add />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/artwork/:id" element={<Artwork />} />
-                        <Route path="/tag" element={<Tag />} />
                         <Route path="/board" element={<Board />} />
                         <Route path="/notfound" element={<NotFound />} />
                     </Route>
